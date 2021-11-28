@@ -18,8 +18,28 @@ Workflow Diagram
 
 Docker Desktop Install Mac
 --------------------------
-Follow this [link](https://hub.docker.com/editions/community/docker-ce-desktop-mac) and download the Docker Desktop and install in Mac.
+1.Follow this [link](https://hub.docker.com/editions/community/docker-ce-desktop-mac) and download the Docker Desktop and install in Mac.
+2. Search Docker Desktop in your machine and start.
 
-Seafile install with Docker
+
+
+Seafile Server install with Docker
 ---------------------------
+1. Download the project repository to you machine.
+cd ~/ && git clone https://github.com/ye-hbone-myat/syncingphotos.git
+
+2. Create seafile data folder in the downloaded repository folder and this will use as seafile data storage file path in seafile docker compose file.
+mkdir -p ~/syncingphotos/Seafile/seafile-data
+
+3. Create seafile mysql folder in the downloaded repository folder and this will use as seafile mysql storage file path in seafile docker compose file.
+mkdir -p ~/syncingphotos/Seafile/seafile-mysql/db
+
+4. Go the file directory where seafile docker file exists.
+cd ~/syncingphotos/Seafile/
+
+5. Deploy the seafile with docker compose.
+docker compose up -d
+
+6. Check the docker containers whether they are running or not.
+docker ps ( if they are running you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
 
