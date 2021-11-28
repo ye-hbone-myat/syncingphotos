@@ -53,6 +53,30 @@ docker ps
 ```
 ( if they are running ,you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
 
-7. Type 127.0.0.1 or localhost in your browser. After seafile server is up and running, you will able to see the seafile login screen.
-8. Use username and password which are predefined in docker compose file to login seafile server.
+7. Type **127.0.0.1** or **localhost** in your browser. After seafile server is up and running, you will able to see the seafile login screen. Use **username** and **password** which are predefined in docker compose file to login seafile server.
+
+8. Create a library for your photos in the seafile web ui.
+
+
+9. After login, click the account logo in the top-right corner and click the system admin. In the system admin UI, click the setting and you will see the **SERVICE_URL** and **FILE_SERVER_ROOT**. Change your machine IP Address in **SERVICE_URL** and **FILE_SERVER_ROOT**. After that. you will able to use your ip address as seafile server.
+
+10. Install seafile desktop syncing client in Mac and seafile pro client in Ipad. Follow this [link](https://www.seafile.com/en/download/) for Mac and Follow this [link](https://apps.apple.com/us/app/seafile-pro/id639202512) for Ipad.
+
+
+Configure Seafile Pro Client in Ipad
+------------------------------------
+1. open Seafile Pro Client
+
+2. login with your credentials (Server IP Address, Username, Password)
+
+3. Go to setting and turn on camera upload setting. It will provide you step-by-step configuration UI. Choose the library you created and select your camera album. This will allow you to upload automatically your photos from camera album to seafile library.
+
+Configure Seafile Desktop Syncing Client in Mac
+-----------------------------------------------
+1. open Seafile Desktop Client
+
+2. login with your credentials (Server IP Address, Username, Password)
+
+3. Right click on the library you created, click **sync this library** and this will sync your photos to your Mac automatically.
+
 
