@@ -51,5 +51,8 @@ docker compose up -d
 ```console 
 docker ps
 ```
-( if they are running you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
+( if they are running ,you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
+
+7. Type 127.0.0.1 or localhost in your browser. After seafile server is up and running, you will able to see the seafile login screen.
+8. Use username and password which are predefined in docker compose file to login seafile server.
 
