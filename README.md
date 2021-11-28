@@ -14,7 +14,7 @@ Requirements
 
 Workflow Diagram
 ----------------
-![Syncing Photos Workflow Diagram](https://github.com/ye-hbone-myat/syncingphotos/blob/cbee168cb7f8f264dc28cc93d23e449bc7dfbb0b/Images/Screen%20Shot%202021-11-28%20at%203.05.23%20AM.png)
+![alter text](https://github.com/ye-hbone-myat/syncingphotos/blob/cbee168cb7f8f264dc28cc93d23e449bc7dfbb0b/Images/Screen%20Shot%202021-11-28%20at%203.05.23%20AM.png)
 
 Docker Desktop Install Mac
 --------------------------
