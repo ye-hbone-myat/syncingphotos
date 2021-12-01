@@ -132,7 +132,7 @@ Note: If your organization is using Google Admin Workspace, need to authorize in
 
 **STEPS**
 
-1. Allow **cron** for full disk access in Mac.
+1. Allow **cron** for full disk access in Mac. Check [here](https://blog.bejarano.io/fixing-cron-jobs-in-mojave/).
 
 2. Change **Service Account Key Json file path** according to your key file location and modify **parentID** to upload as you want in python code. (parentID is the ID number of the folder from Google Drive you want to upload). [Get Folder ID](https://ploi.io/documentation/database/where-do-i-get-google-drive-folder-id)
 
