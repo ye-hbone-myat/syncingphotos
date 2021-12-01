@@ -87,13 +87,46 @@ Now it's time to setup for automation part. I will use folder action with automa
 Setup Automator with Bash
 -------------------------
 
+**Requirements**
+
+1. [Home brew](https://brew.sh)
+
+2. exiftool (To grep photo taken date from photo metadata)
+```console 
+brew install exiftool
+```
+
+3. Automator (Mac build-in software)
+
+**Steps**
+
 1. Open **Automator** in Mac and choose **folder action**.
 
 2. Search **Run Shell Script** in Name and click. Choose folder location path which your photos are stored.
 
 3. Change **pass input** value from **stdin** to as **arguments**
 
-4. Copy the script **seafileDrive.sh** from this repository and put into the **Run Shell Script** box. Then save with a workflow name. After that, all the photos will organize under photo taken folder accordingly and whenever new photos come in, will organize automatically.
+4. Copy the script **seafileDrive.sh** from this repository and put into the **Run Shell Script** box and save with a workflow name. After that, all the photos will organize under photo taken folder accordingly and whenever new photos come in, will organize automatically.
+
+Note: Don't forget to change destination folder directory path in **seafileDrive.sh** script.
+
+Setup Google Drive Syncing with Python
+--------------------------------------
+
+**Requirements**
+
+1. Python3
+```console 
+brew install python3
+```
+2. [Pip](https://phoenixnap.com/kb/install-pip-mac)
+
+3. Google Authentication Python Libraries   
+```console 
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
+
+**Steps**
 
 
 
