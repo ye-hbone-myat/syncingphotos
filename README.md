@@ -55,11 +55,11 @@ docker ps
 
 7. Type **127.0.0.1** or **localhost** in your browser. After seafile server is up and running, you will able to see the seafile login screen. Use **username** and **password** which are predefined in docker compose file to login seafile server.
 
-8. After login, first create a library for your photos in the seafile web ui.
+8. After login, first create a library for your photos in the Seafile Web UI.
 
 9. Click the account logo in the top-right corner and click the system admin. In the system admin UI, click the setting and you will see the **SERVICE_URL** and **FILE_SERVER_ROOT**. Change your machine IP Address in **SERVICE_URL** and **FILE_SERVER_ROOT**. After that, you will be able to use your ip address as seafile server.
 
-10. Install Seafile Desktop Syncing Client in Mac and Seafile Pro Client in Ipad. Follow this [link](https://www.seafile.com/en/download/) for Mac and Follow this [link](https://apps.apple.com/us/app/seafile-pro/id639202512) for Ipad.
+10. Install Seafile Desktop Syncing Client in Mac and Seafile Pro Client in iPad. Follow this [link](https://www.seafile.com/en/download/) for Mac and Follow this [link](https://apps.apple.com/us/app/seafile-pro/id639202512) for iPad.
 
 
 Configure Seafile Pro Client in iPad
