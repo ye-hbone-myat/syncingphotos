@@ -51,11 +51,11 @@ docker compose up -d
 ```console 
 docker ps
 ```
-( if they are running ,you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
+( if they are running , you will see the docker containers: seafile, seafile-mysql and seafile-memcached)
 
 7. Type **127.0.0.1** or **localhost** in your browser. After seafile server is up and running, you will able to see the seafile login screen. Use **username** and **password** which are predefined in docker compose file to login seafile server.
 
-8. After login, First create a library for your photos in the seafile web ui.
+8. After login, first create a library for your photos in the seafile web ui.
 
 9. Click the account logo in the top-right corner and click the system admin. In the system admin UI, click the setting and you will see the **SERVICE_URL** and **FILE_SERVER_ROOT**. Change your machine IP Address in **SERVICE_URL** and **FILE_SERVER_ROOT**. After that, you will be able to use your ip address as seafile server.
 
