@@ -2,7 +2,7 @@
 
 Description
 -----------
-This project is syncing photos from Ipads to Mac and from Mac to Google Drive automically. All the photos in your Ipads will be saved in Mac under folder named with photo taken date by using Seafile file service which is running with Docker, Mac Automator and Bash. Those folders in Mac will be synced to Google Drive using python custom program which is running with cronjob.
+This project is syncing photos from iPads to Mac and from Mac to Google Drive automically. All the photos in your iPads will be saved in Mac under folder named with photo taken date by using Seafile file service which is running with Docker, Mac Automator and Bash. Those folders in Mac will be synced to Google Drive using python custom program which is running with cronjob.
 
 Requirements
 -----------
