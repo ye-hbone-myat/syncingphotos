@@ -148,7 +148,7 @@ Note: You can use Google Drive normal Oauth API authentication instead of servic
   ```
   Input the follow command in the cron editor.
   ```console
-  */30 * * * * /path/to/python3 /path/to/pythonDrive_latest.py /path/to/SyncFolder
+  */30 * * * * /path/to/python3 ~/syncingphotos/pythonDrive.py /path/to/SyncFolder
   ```
   Save and Exit from editor and your cronjob will be installed.
 
