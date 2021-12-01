@@ -62,7 +62,7 @@ docker ps
 10. Install Seafile Desktop Syncing Client in Mac and Seafile Pro Client in Ipad. Follow this [link](https://www.seafile.com/en/download/) for Mac and Follow this [link](https://apps.apple.com/us/app/seafile-pro/id639202512) for Ipad.
 
 
-Configure Seafile Pro Client in Ipad
+Configure Seafile Pro Client in iPad
 ------------------------------------
 1. Open Seafile Pro Client
 
@@ -87,18 +87,18 @@ Now it's time to setup for automation part. I will use folder action with automa
 Setup Automator with Bash
 -------------------------
 
-**Requirements**
+**REQUITEMENTS**
 
-1. [Home brew](https://brew.sh)
+1. Home brew(Follow this [link](https://brew.sh) to install.)
 
-2. exiftool (To grep photo taken date from photo metadata)
+2. Exiftool (To grep photo taken date from photo metadata)
 ```console 
 brew install exiftool
 ```
 
 3. Automator (Mac build-in software)
 
-**Steps**
+**STEPS**
 
 1. Open **Automator** in Mac and choose **folder action**.
 
@@ -113,22 +113,48 @@ Note: Don't forget to change destination folder directory path in **seafileDrive
 Setup Google Drive Syncing with Python
 --------------------------------------
 
-**Requirements**
+**REQUIREMENTS**
 
 1. Python3
 ```console 
 brew install python3
 ```
-2. [Pip](https://phoenixnap.com/kb/install-pip-mac)
+2. Pip(Folllow this [link](https://phoenixnap.com/kb/install-pip-mac) to install.)
 
 3. Google Authentication Python Libraries   
 ```console 
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
-
-**Steps**
-
-
+4. Google Service Account (Follow this [link](https://developers.google.com/identity/protocols/oauth2/service-account) to create and save key json file in your machine.)
+Note: If your organization is using Google Admin Workspace, need to authorize in **Domain wide delegation** for your service account. You can check [here](https://developers.google.com/identity/protocols/oauth2/service-account).
 
 
+**STEPS**
+
+1. Allow **cron** for full disk access in Mac.
+
+2. Change **Service Account Key Json file path** according to your key file location and modify **parentID** to upload as you want in python code. (parentID is the ID number of the folder from Google Drive you want to upload). [Get Folder ID](https://ploi.io/documentation/database/where-do-i-get-google-drive-folder-id)
+
+3. Share the folder of your Google Drive to the service account because we will sync files from the background using service account.
+Note: You can use Google Drive normal Oauth API authentication instead of service account. But if you do, you need through browser with the auth link everytime you run the script. I want to run the script in the background. So service account is the best choice for me.) 
+
+4. Setup Python Script As Cron Job. I will setup a cronjob which wil be running every 30 min. That means your local folder from Mac and Google Drive Folder will be syncing every 30 min.
+
+Enter to cron editor. You can change text editor as you wish.
+```console
+EDITOR=nano crontab -e
+```
+Input the follow command in the cron editor.
+```console
+*/30 * * * * /path/to/python3 /path/to/pythonDrive_latest.py /path/to/SyncFolder
+```
+
+So That is. Thanks.
+
+
+
+
+
+
+.
 
