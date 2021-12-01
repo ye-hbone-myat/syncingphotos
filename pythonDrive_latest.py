@@ -13,12 +13,12 @@ import os
 
 # https://developers.google.com/analytics/devguides/config/mgmt/v3/quickstart/service-py
 from oauth2client.service_account import ServiceAccountCredentials
-credentials = ServiceAccountCredentials.from_json_keyfile_name("/Users/bigpapa/yehbonemyat-952240549558.json", scopes="https://www.googleapis.com/auth/drive")
+credentials = ServiceAccountCredentials.from_json_keyfile_name("/Users/bigpapa/solid-century.json", scopes="https://www.googleapis.com/auth/drive")
 
 # https://developers.google.com/drive/api/v3/quickstart/python
 service = build('drive', 'v3', credentials=credentials)
 count = 0
-PARENTID = '1se8RXUsG7dfVjGIjEGVyAPwrk1WW0DW5'
+PARENTID = '1U_d9sr3igrbFByxSr61-xlUhJ2ddiHGk'
 checkfilename = ""
 checkfolder_id = ""
 
@@ -27,7 +27,8 @@ def checkfile(filename,parentid):
     query = f"parents='{parentid}'"
     while True:
         response = service.files().list(q=query,
-                                          spaces='drive',
+                                          spaces='drive', 
+                                          supportsAllDrives=True, includeItemsFromAllDrives=True,
                                           fields='nextPageToken, files(id, name)',
                                           pageToken=page_token).execute()
         for file in response.get('files', []):
@@ -128,7 +129,8 @@ def checkfolder(foldername):
     query = f"parents='{PARENTID}'"
     while True:
         response = service.files().list(q=query,
-                                          spaces='drive',
+                                          spaces='drive', 
+                                          supportsAllDrives=True, includeItemsFromAllDrives=True,
                                           fields='nextPageToken, files(id, name)',
                                           pageToken=page_token).execute()
         for file in response.get('files', []):
@@ -148,7 +150,8 @@ def getfolderid(folder):
     query = f"parents='{PARENTID}'"
     while True:
         response = service.files().list(q=query,
-                                          spaces='drive',
+                                          spaces='drive', 
+                                          supportsAllDrives=True, includeItemsFromAllDrives=True,
                                           fields='nextPageToken, files(id, name)',
                                           pageToken=page_token).execute()
         for file in response.get('files', []):

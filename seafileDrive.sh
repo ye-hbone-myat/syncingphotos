@@ -5,6 +5,7 @@ do
 	if [[ $f == * ]]
 	then
 		filename=$(exiftool -T $f -DateTimeOriginal | awk '{print $1;}')
+		# Change destination local folder path
 		dest="/Users/bigpapa/Documents/GoogleDriveSync/$filename" && mkdir $dest
 	fi
 	if [[	$dest != "" ]]
