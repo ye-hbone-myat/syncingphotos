@@ -1,3 +1,4 @@
+# Change path for exiftool
 export PATH=/opt/homebrew/bin:$PATH
 for f in "$@"
 do
