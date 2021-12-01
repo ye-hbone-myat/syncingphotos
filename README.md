@@ -150,6 +150,7 @@ Note: You can use Google Drive normal Oauth API authentication instead of servic
   ```console
   */30 * * * * /path/to/python3 /path/to/pythonDrive_latest.py /path/to/SyncFolder
   ```
+  Save and Exit from editor and your cronjob will be installed.
 
 So, the python google drive syncing script will be running every 30 minutes. That is. 
 
