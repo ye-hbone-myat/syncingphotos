@@ -152,9 +152,25 @@ Note: You can use Google Drive normal Oauth API authentication instead of servic
   ```
   Save and Exit from editor and your cronjob will be installed.
 
-So, the python google drive syncing script will be running every 30 minutes. That is. 
+So, the python google drive syncing script will be running every 30 minutes.
 
+Manual Importing Photos from iPads to iMac
+--------------------------
 
+1. Connect your iPad to iMac with USB-C cable.
+2. Go to Photos.
+3. Go to your iPad tab.
+4. Select all new photos.
+5. Copy those photos to Seafile Photo Folder.
 
-Thanks.
+Manual Syncing Photos from iMac to Google Drive with Python
+----------------------
+
+1. Open terminal
+2. Run the following command.
+```console
+python3 ~/syncingphotos/pythonDrive.py /path/to/GoogleDriveSync/
+```
+It will sync your all new photos to the Google Drive.
+
 
