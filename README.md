@@ -123,7 +123,7 @@ brew install python3
 
 3. Google Authentication Python Libraries   
 ```console 
-pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib oauth2client
+pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib oauth2client
 ```
 4. Google Service Account (Follow this [link](https://developers.google.com/identity/protocols/oauth2/service-account) to create and save key json file in your machine.)
 
